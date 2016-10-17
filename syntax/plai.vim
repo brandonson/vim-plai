@@ -83,3 +83,5 @@ hi link racketContainedNumberError Error
 
 hi link racketNumber Number
 hi link racketString Constant
+
+hi link plaiCondition Conditional

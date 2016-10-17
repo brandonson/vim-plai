@@ -1,7 +1,9 @@
-if did_filetype()
-  finish
-endif
+fun! s:DetectPlai()
+  let s:lineOne = getline(1)
 
-if getline(1) =~# '^#lang\s\+plai'
-  setfiletype plai
-endif
+  if s:lineOne == "#lang plai"
+    set filetype=plai
+  endif
+endfun
+
+au BufNewFile,BufRead *.rkt call s:DetectPlai()
